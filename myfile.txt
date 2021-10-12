@@ -1,0 +1,735 @@
+Javascript.info
+<script>
+alert(“Hello world”)
+</script>
+
+<script src=“alert.js”></script>
+alert(“Hello World”)
+
+Use strict make the whole code work in the modern way
+
+For old codes use strict can be used in a function ( function(){‘use strict’;})
+
+Same variable can not be declared twice using let. Variable can not be declared with numbers or hyphens.
+Case matters in javascript if apple AppLe. Some words are reserved like let, return, class and function. Const keyword is used to set constant value through out the life of program. 
+Let admin, name
+name=“John”
+admin=name
+alert(admin)
+
+The number type represents both integers and float. Special numeric values are also present like infinity, negative infinity and NAN. The advantage of NAN is that script will never die the worst case scenario is we will get NAN. Javascript is limited to show large numbers in order to get large numbers at the end append n at the last of an integer to get large numbers. Strings are surrounded by quotes in javascript. Double and single quotes have same functionality in javascript. However, backtrack can be used to embed variables and expressions into string. Boolean values comes in the form of true and false. Boolean can also be used in the form of comparisons 
+let isgreater = 4>1
+alert(isgreater)
+let age=null 
+The undefined value is assigned to a variable which is not defined. It can also be assigned but we avoid that.
+
+Alert shows a message and wait for user to press ok 
+alert(“hi”);
+Prompt shows a message and an input text field where user can enter value. It has ok/cancel button.
+result=prompt(title, default)
+Confirm shows the modal window and two buttons ok/cancel. If ok then value is true else false.
+Let result=prompt(“what is your name?”,John Doe);
+Alert(result);
+
+Undefined is NAN as number not 0. 0 and “ “ are true as Boolean.
+alert(Number(‘123’));
+
+An operator is unary if it has a single operand and an operator is binary if it has two operands. 
+Exponentiation
+alert(2**2)=4
+alert(4**(1/2))
+String Concatenation
+Let s=“my”+”name”
+if any operand is a string the other automatically coverts to the string. The binary + is the only operator that converts to string if any operand is string.
+The unary operator if applied to single operand number it won’t do anything to number. However, if that operand is not a number then it converts it to number.
+Counter++ difference?
+Comma let a=(1+2,3+4)//a=7
+
+When comparing different types javascript converts them to numbers automatically. It return result in boolean.
+alert(‘2’>1) // true
+Comparison of NULL and undefined will always be true ==.  Same types then it will compare them according to their types else for different types it will convert them to numbers.
+
+The result is converted to Boolean values like 0, “”, null, undefined, and NAN are false. We can also pass a pre-evaluated boolean.
+
+Let year = prompt(‘Which year you were born?’, ’’)
+if(year==2015) alert(‘you are right’);
+
+Conditional Operator ‘?’
+Let result =condition?  value1:value2
+Let result= 19>18 // true
+
+Let age = prompt(“enter your age?”,’’)
+Let message=(age<3)?’Hi, baby’ : (age<18)?’Hi, teen’: ‘Hi, adult’;
+alert(message);
+
+Let result=(a+b<4)?’Below’:’Over’;
+
+Let message=(login==‘employee’)?’Hello’ :(login==‘Director’)?’Greetings’:’ ’;
+
+OR operator returns the first truth value. AND operator returns the first false value. NOT operator converts operand to bool and inverse the value. A double NOT is used for converting value to boolean type.
+Printing without using if
+(x>0) && alert(‘bye bye’);
+if(age<14 || age>90)
+if(!(age>=14 && age<=90))
+
+Nullish coalescing helps in getting back the first defined value. For example || it considers 0 to be false so it skips and gets the next value. However, Nullish coalescing value returns the first defined value even if it’s 0.
+
+Variables declared in loop are called inline variables.
+Let i=3
+while(i){
+alert(i);
+i—;
+}
+
+for(let I=0;i<3;i++){
+alert(i);
+}
+
+Let sum=0
+
+while(true){
+Let value= +prompt(‘enter a number’, ’’);
+if(!value) break;
+sum+=value;
+}
+alert(‘sum:’ +sum);
+
+for(let i=0; i<10; i++){
+if(i%2==0) continue;
+alert(I);
+}
+
+Outer: for(let I=0;i<3;i++){
+for(let j=0;j<3;j++){
+Let input=prompt(`Value at coords (${I},${j}`, ‘ ’);
+if(!input) break outer;
+}
+}
+alert(‘Done’);
+
+for(;;){
+let input=+prompt(‘enter number’, ’ ‘);
+if(input<=100 || input==NULL) break;
+}
+
+Switch statements are strict equality.
+Switch (x){
+Case ‘value1’:
+Break;
+Case ‘value2’
+Break;
+Default:
+Break;
+}
+
+Let a=+prompt(‘a?’, ’’);
+Switch (a){
+Case ‘0’:
+alert(0);
+Break;
+Case ‘1’:
+alert(1);
+Break;
+Case ‘3’:
+Case ‘4’:
+alert(‘2,3’);
+Break;
+}
+ 
+Function checkAge(age){
+Return (age>18) ? True: ‘Did your parents allow you?’;
+}
+
+Function checkAge(age){
+Return (age>18 || confirm(‘Did your parents allow you?’));
+}
+
+Function power(x,n){
+Return x**n;
+}
+
+Function sayHi(){
+alert(‘Hello’);
+}
+
+Let sayHi = Function() {
+alert(‘Hello’);
+};
+
+Let func=sayHi;
+If sayHi() used then it’s value would have been assigned; better understanding required. Function declaration makes it visible only inside the code block while function expression
+
+Function ask(question, yes, no){
+if(confirm(question)) yes();
+Else no();}
+Function showOk(){
+alert(“hi”);}
+Function showCancel(){
+alert(“hey”);}
+
+ask(“Test”,showOk,showCancel);
+
+Function declaration is within a code block so we use Function expression if we want it to be visible everywhere.
+
+Function ask(question, yes, no){
+if(confirm(question)) yes();
+Else no();}
+Ask(
+‘Do you agree?’,
+()=>alert(‘Hello’),
+()=>alert(‘Hi’));
+
+Objects
+
+Let user={
+Name:’John’,
+Age:30,
+‘Like birds’: true,
+}
+
+User.Name;
+User[“Like birds”]
+
+Computed Properties
+let fruit = prompt("Which fruit to buy?", "apple");
+let bag = {
+ [fruit]: 5, 
+};
+alert( bag.apple );
+
+Property value shorthand
+Function makeUser(name, age){
+Return {
+Name: name,
+Age:age,
+};
+}
+
+Let user=makeUser(“John”,30);
+alert(user.name);
+
+Let user={}
+User.name=“John”;
+User.surname=“Smith”
+User.name=“Pete”
+Delete user.age;
+
+Let obj={};
+
+Alert isEmpty(obj){
+for(let key in obj){
+Return false;
+}
+Return true;
+}
+
+Let salaries={
+John:100
+Ann:160
+Pete:130
+}
+
+salariesSum(Salaries){
+Let sum=0;
+for(let key in salaries){
+sum+=salaries[key];
+}
+Else{
+Return sum;
+}
+
+Let menu={
+Width:200,
+Length:300,
+Title:”My menu”,
+}
+
+multiplyNumeic(menu){
+for(let key in menu){
+if(menu[key]==‘number’){
+menu[key]=menu[key]*2;
+}
+}
+
+Let calculator={
+a:2,
+b:2,
+read(){
+alert(a);
+alert(b);
+}
+sum(){
+alert(this.a + this.b);
+}
+mul(){
+alert(this.a * this.b)
+}
+};
+
+What is chaining in objects?
+
+Object reference and copying
+Inn objects if an object1=object2 the reference is copied so if change is made at one side the other is also affected.
+
+Cloning is way to make the duplicates of both objects so they don’t share a same reference.
+
+Let user={
+User: ‘John’,
+Age:30
+}
+Let clone={};
+For(let key in user){
+clone[key]=user[key];
+}
+
+Clone.name=‘Pete’;
+
+alert(user.name)
+ 
+Object.assign
+Object.assign(dest, [src1,src2,src3])
+
+Let user= {name:”John”};
+Let permission1 = {canView:true};
+Let permission2={canEdit:true};
+
+Object.assign(user,permission1,permission2);
+
+If a property name is already written it gets overwritten
+let user = { name: "John" };
+Object.assign(user, { name: "Pete" });
+alert(user.name);
+
+Short cut to skip for..in loop for cloning
+let user = {
+  name: "John",
+  age: 30
+};
+let clone = Object.assign({}, user);
+
+Nested cloning.
+
+Garbage Collection
+The main concept of memory management in java is that those values that are reachable are guaranteed stored in memory. Some of the optimisation techniques to manage memory. General collection, Incremental collection, and idle time collection. 
+
+Constructor Function
+Function User(name){
+This.name=name;
+This.isAdmin=false;
+}
+
+Let user=new User(“Jack”);
+alert(user.name);
+alert(user.isAdmin);
+
+Let user = new function() {
+This.name=‘John’,
+This.isadmin=false,
+}
+
+Use constructor without new 
+Function user(name){
+if(!new.target){
+Return new User(name);
+}
+This.name=name;
+}
+
+Let John=User(‘John’);
+alert(John.name);
+
+If a constructor is called with object then object is returned and instead of this. Else it returns this.
+
+Optional chaining is a safe way to access nested object properties in case any intermediate object is not present it return undefined.
+
+Numbers:
+let sum;
+sum=+prompt(‘enter number’,’’);
+sum+=sum
+sum=+prompt(‘enter number’,’’);
+sum+=sum
+
+readNumber(){
+Let num=prompt(‘enter value’, ‘’);
+if(isNaN(num)){
+readNumber();
+}
+else if(num == ‘’ || num ==null){
+Return null;
+}
+Return num;
+}
+
+Arrays:
+let arr = [‘I’, ‘go’, ‘home’]
+Delete arr[1];
+Alert (arr[1]);
+alert(arr.length);
+
+Arr.splice(start[, deleteCount, elem1, .., elemN])
+
+Let arr=[1,2,3];
+arr.splice(1,1);
+alert(arr)
+
+Negative indexes in arrays confusion?
+
+Arr.slice([start],[end])
+Let arr=[’t’, ’e’, ’s’, ’t’];
+alert(arr.slice(1,3));
+alert(arr.slice(-2));
+
+Arr.concat creates an new that includes values from other arrays and items.
+arr.concat(arg1,arg2…)
+if an array-like object has a special Symbol.isConcatSpreadable property, then it’s treated as an array by concat
+
+Iterate for each run a function for every element of the array. 
+arr.forEach(function(item, index, array)){
+}
+
+Arr.foreach(alert);
+
+arr.indexOf(item, from) – looks for item starting from index from, and returns the index where it was found, otherwise -1.
+arr.lastIndexOf(item, from) – same, but looks for from right to left.
+arr.includes(item, from) – looks for item starting from index from, return true if found
+
+Find returns single value
+For finding an object with specific condition arr.find() is used. 
+Let result = are.find(function(item, index, array){
+});
+
+Filter returns multiple values
+Filter
+let users = [
+  {id: 1, name: "John"},
+  {id: 2, name: "Pete"},
+  {id: 3, name: "Mary"}
+];
+let user = users.find(item => item.id == 1);
+alert(user.name); // John
+
+Arr.map method is one of the most useful and often used. This function is called for each element and returns array of results.
+
+let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(item => item.length);
+alert(lengths);
+
+arr.sort() is used to sort the array. Items are sorted as arrays by default. 
+Arr.sort((a,b)=> a-b);
+It’s better to use locale compare for strings 
+arr.sort((a, b) => a.localeCompare(b)));
+
+Arr.reverse(); returns the array in reverse order.
+
+Split can split string into array and join can join array into string
+
+let names = 'Bilbo, Gandalf, Nazgul';
+let arr= names.split(‘, ‘);
+
+let arr = ['Bilbo', 'Gandalf', 'Nazgul'];
+let str = arr.join(‘, ’);
+
+reduce/reduceRight
+let value=arr.reduce(function(accumulator, item, index, array){
+}, [initial]);
+
+Object key value entries
+Object.value(obj);
+Object.key(obj);
+Object.entries(obj);
+
+Object.keys, values and entries
+Practice:
+
+<!DOCTYPE html>
+<script>
+"use strict";
+
+let prices = {
+  banana: 1,
+  orange: 2,
+  meat: 4,
+};
+// alert(prices.banana);
+
+for(let key of Object.keys(prices)){
+  prices[key]*=2;
+  // pricesdoublePrices*2;
+};
+alert(prices.banana); // 8
+</script>
+
+Date:
+Date is built in object which stores date, time and ways to manage date and time.
+Let now= new date();
+alert(now);
+
+New Date(0) displays date from Jan01_1970
+
+The string is parsed automatically same as date.parse.
+
+New date(year, month, date, hours, minutes, seconds, ms)
+
+The year must have 4 digits: 2013 is okay, 98 is not. 
+The month count starts with 0 (Jan), up to 11 (Dec).
+The date parameter is actually the day of month, if absent then 1 is assumed.
+If hours/minutes/seconds/ms is absent, they are assumed to be equal 0.
+ 
+getFullYear();
+getMonth();
+getDate();
+getHours();getMinutes();getSeconds();getMilliseconds();
+getDay();
+getTime();
+getTimezoneOffset();
+
+setFullYear(year, [month], [date])
+setMonth(month, [date])
+setDate(date)
+setHours(hour, [min], [sec], [ms])
+setMinutes(min, [sec], [ms])
+setSeconds(sec, [ms])
+setMilliseconds(ms)
+setTime(milliseconds) 
+
+Date.now returns current timestamp but does’t require create date object.
+
+Date.parse() can return date from  a string;
+
+JSON is a general format to represent value and objects.
+JSON.stringify() convert object into JSON
+JSON.parse() reverts back to objects
+
+1.
+let student = {
+  name: 'John',
+  age: 30,
+  isAdmin: false,
+  courses: ['html', 'css', 'js'],
+  wife: null
+};
+
+Let json=JSON.stringify(student);
+
+let json = JSON.stringify(value[, replacer, space])
+
+2.
+let room = {
+  number: 23
+};
+
+let meetup = {
+  title: "Conference",
+  participants: [{name: "John"}, {name: "Alice"}],
+  place: room // meetup references room
+};
+
+room.occupiedBy = meetup; // room references meetup
+
+JSON.stringify(meetup,[‘title’])
+
+Space is used to make spaces for better formatting.
+
+Practice:
+let room = {
+  number: 23
+};
+
+let meetup = {
+  title: "Conference",
+  occupiedBy: [{name: "John"}, {name: "Alice"}],
+  place: room
+};
+
+// circular references
+room.occupiedBy = meetup;
+meetup.self = meetup;
+
+alert(JSON.stringify(meet up, function replacer(key, value){
+alert(`${key}:${value}`);
+return (key==‘self’) ? Undefined:value;
+}));
+
+Wrong!!!!
+<!DOCTYPE html>
+<script>
+"use strict";
+
+let room = {
+  number: 23
+};
+
+let meetup = {
+  title: "Conference",
+  occupiedBy: [{name: "John"}, {name: "Alice"}],
+  place: room
+};
+
+// alert('hi');
+
+// circular references
+room.occupiedBy = meetup;
+meetup.self = meetup;
+
+alert( JSON.stringify(room, function replacer(key, value) {
+  /* your code */
+  // alert(`${key}:${value}`);
+  return (key=='self' || Object.keys(room)==key) ? undefined:value;
+}));
+What is self in this case?
+/* result should be:
+{
+  "title":"Conference",
+  "occupiedBy":[{"name":"John"},{"name":"Alice"}],
+  "place":{"number":23}
+}
+*/
+</script>
+
+Global object
+Global object provides variables and functions that re available anywhere.
+In browser it is named window and in node.js it is global.
+Variable declared with Hi becomes global and functions declared also becomes global.
+New language features may include not only syntax constructs and operators, but also built-in functions.
+
+Function object, NFE
+Functions name is accessible as the ‘name’ property.
+function sayHi() {
+  alert("Hi");
+};
+console.log(sayHi.name);
+Function.length returns the number of parameters in function.
+Function f1(a){}
+F1.length;
+Named function expression allows function to reference itself and it’s not visible outside of the function.
+
+Scheduling:
+SetTimeout
+Let timerId=setTimeout(()=>alert(‘never happens’),1000);
+alert(timerId);
+
+clearTimeout(timerId);
+alert(timerId);
+
+setInterval
+let timerId = setInterval(() => alert('tick'), 2000);
+
+// after 5 seconds stop
+setTimeout(() => { clearInterval(timerId); alert('stop'); }, 5000);
+
+Nested setTimeout
+The nested setTimeout is more flexible and allows to schedule next call differently depending on the current call.
+
+Let delay=5000;
+Let timerId = setTimeout(function request(){
+//Send request
+if(request failed due to server overload){
+delay*=2;
+}
+
+timerId=setTimeout(request, delay);
+
+}, delay);
+
+Zero delay setTimeout
+setTimeout(()=>alert(‘world));
+alert(‘hello’);
+
+Classes
+Class User{
+constructor(name){this.name=name;}
+sayHi(){alert(this.name)};
+}
+
+Class expression
+Let user = class {
+sayHi() {
+alert(‘hello’);
+}
+};
+
+Class methods are stored in User.prototype.
+Overriding constructor use super()
+Overriding method use super.method()
+A function created by class is labelled as special internal property. Class methods  are non-enumberable and always use strict.
+Such methods that are declared in class and assigned to itself are called static. When a class is inherited from them they are also passed.
+Similar to named function expression class expression can not be accessed outside it’s visible to class only.
+
+Classes may include getters/setters
+
+Classes can have computed method names using brackets […] 
+Class can have fields that are set on individual objects.
+
+Class can be inherited using the keyword extends.
+THIS in class?
+
+error handling
+begins with error if there is no error skips catch block, else it goes to catch block. It works for only runtime errors. They both work synchronously. The error generated is passed as an object argument to catch. Catch may omit error object if we do’t need it. 
+
+let json = '{ "age": 30 }'; // incomplete data
+
+Try{
+Let user =JSON.parse(json);
+if(!user.name){
+Throw new syntaxerror(“incomplete data: no name”);
+}
+
+Blabla;
+alert(user.name);
+}catch(err){
+If (err instance of SyntaxError){
+alert(‘JSON error:’ + err.message);
+}else{
+Throw err;
+}
+}
+
+Try catch finally
+Finally works after try if everything went well. Finally works after catch if there was an error.
+
+Variables declared in try catch block are local.
+
+Custom Error Handling
+Extending error
+Multiple inheritance
+Wrapping exceptions
+
+Spread operator
+To gather all parameters in an array using spread operator. 
+Function sumAll(..args){
+Let sum=0;
+for(let arg of args) sum+=arg;
+
+Return sum;
+}
+
+alert(sumAll(1,2,3));
+First two arguments go into variables other go into array 
+function showName(firstName, lastName, ...titles) {
+  alert( firstName + ' ' + lastName ); // Julius Caesar
+
+  // the rest go into titles array
+  // i.e. titles = ["Consul", "Imperator"]
+  alert( titles[0] ); // Consul
+  alert( titles[1] ); // Imperator
+  alert( titles.length ); // 2
+}
+
+showName("Julius", "Caesar", "Consul", "Imperator");
+
+Arguments variable
+
+Spread syntax
+for array
+Let arr=[3,5,1]
+alert(Math.max(…arr));
+
+Merge array
+let arr = [3, 5, 1];
+let arr2 = [8, 9, 15];
+let merged = [0, ...arr, 2, ...arr2];
+alert(merged); // 0,3,5,1,2,8,9,15 (0, then arr, then 2, then arr2)
+
+Copying object
+let objCopy = { ...obj }; 
+When ... is at the end of function parameters, it’s “rest parameters” and gathers the rest of the list of arguments into an array.
+When ... occurs in a function call or alike, it’s called a “spread syntax” and expands an array into a list.
