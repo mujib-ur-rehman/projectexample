@@ -733,3 +733,21 @@ Copying object
 let objCopy = { ...obj }; 
 When ... is at the end of function parameters, it’s “rest parameters” and gathers the rest of the list of arguments into an array.
 When ... occurs in a function call or alike, it’s called a “spread syntax” and expands an array into a list.
+
+Git Commands
+Git initialization
+Git init
+Git status
+Commits
+Git add .
+Git commit -m “”
+Git log
+Git checkout …
+Git checkout — .
+Git reset —hard …
+Branches
+Git branch
+Git checkout …
+Git checkout -b …
+Git merge …
+Git branch -D …
