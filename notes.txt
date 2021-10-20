@@ -734,4 +734,14 @@ let objCopy = { ...obj };
 When ... is at the end of function parameters, it’s “rest parameters” and gathers the rest of the list of arguments into an array.
 When ... occurs in a function call or alike, it’s called a “spread syntax” and expands an array into a list.
 
-testing
+20/10/2021
+Reusable component
+Send data child to parent component
+Pipe with example
+Basic Routing
+Page Not found
+Custom directive
+Service
+Call API
+Show list from API data
+Model and Interface
